@@ -13,7 +13,6 @@
                 throw new ArgumentException($"{name} cannot be null.");
             }
 
-            // Thi is MyWork Branch
         }
     }
 }

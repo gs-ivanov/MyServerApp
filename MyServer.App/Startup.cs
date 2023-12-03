@@ -7,25 +7,40 @@
 
     class Startup
     {
+        // Thi is MyWork Branch
 
-        public static async Task Main()
-        => await new HttpServer(routes => routes
-         .MapGet("/c", request =>
-         {
-             var query = request.Query;
-             var catName =
-             query.ContainsKey("Name") ? query["Name"] : "The cats";
-             var result = $"Hello from {catName}!";
+        public static void Main()
+        {
+            var obj = new HttpServer(routes => routes
+              .MapGet("/c", request =>
+           {
+               var query = request.Query;
+               var catName =
+               query.ContainsKey("Name") ? query["Name"] : "The cats";
+               var result = $"Hello from {catName}!";
 
-             return new HtmlResponse(result);
-         })
-        .MapGet("/", new TextResponse("Hello from Ivo!"))
-        .MapGet("/g", new TestResponse("Hello from George!"))
-        .MapGet("/Cats", new HtmlResponse("<h1>Hello from the cats!</h1>"))
-        .MapGet("/Dogs", new TextResponse("<h1>Hello from the dogs!</h1>"))
-        )
-         //.Test(new TextResponse("Hello from Ivo!"));
-         .Start();
+               return new HtmlResponse(result);
+           }));
+              //.MapGet("/Dogs", new TextResponse("<h1>Hello from the dogs!</h1>")));
+        }
+
+        //public static async Task Main()
+        //=> await new HttpServer(routes => routes
+        // .MapGet("/c", request =>
+        // {
+        //     var query = request.Query;
+        //     var catName =
+        //     query.ContainsKey("Name") ? query["Name"] : "The cats";
+        //     var result = $"Hello from {catName}!";
+
+        //     return new HtmlResponse(result);
+        // })
+        //.MapGet("/", new TextResponse("Hello from Ivo!"))
+        //.MapGet("/g", new TextResponse("Hello from George!"))
+        //.MapGet("/Cats", new HtmlResponse("<h1>Hello from the cats!</h1>"))
+        //.MapGet("/Dogs", new TextResponse("<h1>Hello from the dogs!</h1>"))
+        //)
+        // .Start();
 
 
 
