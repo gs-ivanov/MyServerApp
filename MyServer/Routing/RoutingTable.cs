@@ -44,7 +44,7 @@
             => MapGet(path, request => response);
 
         public IRoutingTable MapGet(string path,Func<HttpRequest,HttpResponse> responseFunction)
-        =>ap(HttpMethod.Get, path, responseFunction);
+        =>Map(HttpMethod.Get, path, responseFunction);
 
         //public IRoutingTable MapGet(string path, Func<HttpRequest, HttpResponse> responseFunction)
         //    => Map(HttpMethod.Get, path, responseFunction);
