@@ -1,12 +1,7 @@
 ﻿namespace MyServer.Responses
 {
-    using MyServer.Http;
-
-    public class NotFoundResponse : HttpResponse
+    public class NotFoundResponse
     {
-        public NotFoundResponse()
-            : base(HttpStatusCode.NotFound)
-        {
-        }
+
     }
 }

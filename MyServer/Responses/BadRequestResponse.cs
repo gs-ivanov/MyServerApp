@@ -2,11 +2,8 @@
 {
     using MyServer.Http;
 
-    public class BadRequestResponse : HttpResponse
+    public class BadRequestResponse 
     {
-        public BadRequestResponse()
-            :base(HttpStatusCode.BadRequest)
-        {
-        }
+
     }
 }
