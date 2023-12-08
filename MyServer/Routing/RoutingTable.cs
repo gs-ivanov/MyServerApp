@@ -28,7 +28,10 @@
             return this.Map(method, path, request => response);
         }
 
-        public IRoutingTable Map(HttpMethod method, string path, Func<HttpRequest, HttpResponse> responseFunction)
+        public IRoutingTable Map(
+            HttpMethod method,
+            string path,
+            Func<HttpRequest, HttpResponse> responseFunction)
         {
             Guard.AgainstNull(path, nameof(path));
             Guard.AgainstNull(responseFunction, nameof(responseFunction));
@@ -43,7 +46,9 @@
             HttpResponse response)
             => MapGet(path, request => response);
 
-        public IRoutingTable MapGet(string path,Func<HttpRequest,HttpResponse> responseFunction)
+        public IRoutingTable MapGet(
+            string path,
+            Func<HttpRequest,HttpResponse> responseFunction)
         =>Map(HttpMethod.Get, path, responseFunction);
 
         //public IRoutingTable MapGet(string path, Func<HttpRequest, HttpResponse> responseFunction)
