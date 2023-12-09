@@ -5,15 +5,7 @@
 
     public class HttpServer
     {
-        private readonly RoutingTable routingTable;
-
-        public HttpServer(Action<IRoutingTable> routingTableConfiguration)
-        {
-            routingTableConfiguration(this.routingTable = new RoutingTable());
-        }
-
-
-
+ 
         //public async Task Start()
         //{
         //    //return;
