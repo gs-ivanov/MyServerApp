@@ -9,9 +9,9 @@
 
         public HttpServer(Action<IRoutingTable> routingConfiguration)
         {
-            this.routingTable = new RoutingTable();
+            //this.routingTable = new RoutingTable();
 
-            routingConfiguration(routingTable);
+            routingConfiguration(new RoutingTable());
         }
 
         //public async Task Start()

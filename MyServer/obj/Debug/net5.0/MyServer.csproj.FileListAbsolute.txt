@@ -2,7 +2,6 @@ C:\Users\George\source\repos\MyServerApp\MyServer\bin\Debug\net5.0\MyServer.deps
 C:\Users\George\source\repos\MyServerApp\MyServer\bin\Debug\net5.0\MyServer.dll
 C:\Users\George\source\repos\MyServerApp\MyServer\bin\Debug\net5.0\ref\MyServer.dll
 C:\Users\George\source\repos\MyServerApp\MyServer\bin\Debug\net5.0\MyServer.pdb
-C:\Users\George\source\repos\MyServerApp\MyServer\obj\Debug\net5.0\MyServer.csproj.AssemblyReference.cache
 C:\Users\George\source\repos\MyServerApp\MyServer\obj\Debug\net5.0\MyServer.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\George\source\repos\MyServerApp\MyServer\obj\Debug\net5.0\MyServer.AssemblyInfoInputs.cache
 C:\Users\George\source\repos\MyServerApp\MyServer\obj\Debug\net5.0\MyServer.AssemblyInfo.cs
@@ -10,3 +9,4 @@ C:\Users\George\source\repos\MyServerApp\MyServer\obj\Debug\net5.0\MyServer.cspr
 C:\Users\George\source\repos\MyServerApp\MyServer\obj\Debug\net5.0\MyServer.dll
 C:\Users\George\source\repos\MyServerApp\MyServer\obj\Debug\net5.0\ref\MyServer.dll
 C:\Users\George\source\repos\MyServerApp\MyServer\obj\Debug\net5.0\MyServer.pdb
+C:\Users\George\source\repos\MyServerApp\MyServer\obj\Debug\net5.0\MyServer.csproj.AssemblyReference.cache

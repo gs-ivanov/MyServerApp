@@ -5,14 +5,28 @@
 
     public class HttpHeaderCollection : IEnumerable<HttpHeader>
     {
-        IEnumerator<HttpHeader> IEnumerable<HttpHeader>.GetEnumerator()
+        private readonly Dictionary<string, HttpHeader> headers;
+
+
+        public HttpHeaderCollection()
         {
-            throw new System.NotImplementedException();
+            this.headers = new Dictionary<string, HttpHeader>();
+
         }
 
-        IEnumerator IEnumerable.GetEnumerator()
+        public int Count => this.headers.Count;
+
+        public void Add(string name,string value)
         {
-            throw new System.NotImplementedException();
+            var header = new HttpHeader(name,value);
+
+           this.headers.Add(name, header);
         }
+
+        public IEnumerator<HttpHeader> GetEnumerator()
+            => this.headers.Values.GetEnumerator();
+
+        IEnumerator IEnumerable.GetEnumerator()
+            => this.GetEnumerator();
     }
 }

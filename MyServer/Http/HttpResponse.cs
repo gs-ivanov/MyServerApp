@@ -3,16 +3,18 @@
     using MyServer.Http;
     public abstract class HttpResponse
     {
-        public HttpResponse(HttpStatusCode statusCode,string path,string contentType)
+        public HttpResponse(HttpStatusCode statusCode)
         {
             this.StatusCode = statusCode;
-            this.Path = path;
-            this.ContentType = contentType;
         }
 
         public HttpStatusCode StatusCode { get; init; }
 
-        public string Path{ get; init; }
+        public HttpHeaderCollection Headers { get; } = new HttpHeaderCollection();
+
+        public string Content{ get; init; }
+
+
 
         public string ContentType{ get; init; }
 
