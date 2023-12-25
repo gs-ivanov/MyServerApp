@@ -5,6 +5,6 @@
 
     public interface IRoutingTable
     {
-        IRoutingTable MapGet(string path, TextResponse response);
+
     }
 }
