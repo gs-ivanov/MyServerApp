@@ -1,7 +1,11 @@
 ﻿namespace MyServer.Responses
 {
-    public class NotFoundResponse
+    using MyServer.Http;
+    public class NotFoundResponse : HttpResponse
     {
-
+        public NotFoundResponse()
+            :base(HttpStatusCode.NotFound)
+        {
+        }
     }
 }
