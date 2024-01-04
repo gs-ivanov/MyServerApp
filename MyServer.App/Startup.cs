@@ -24,7 +24,6 @@
         .MapGet("/Cats", new HtmlResponse("<h1>Hello from the cats!</h1>"))
         .MapGet("/Dogs", new TextResponse("<h1>Hello from the dogs!</h1>"))
         )
-         //.Test(new TextResponse("Hello from Ivo!"));
          .Start();
 
 
