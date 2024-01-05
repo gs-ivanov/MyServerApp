@@ -34,12 +34,22 @@
 
                 routingTableConfiguration(routingTable);
             }
+
+
+
         }
 
         public static void Main()
         {
-            var x = new MyServer(route => route
-              .MapGet("/", new HtmlResponse("<h1>Hello from Iva!</h1>")));
+            //var x = new MyServer(route => route
+            //  .MapGet("/", new HtmlResponse("<h1>Hello from Iva!</h1>")));
+
+            Action<IRoutingTable> action = route => route.MapGet("/Cats", new TextResponse("hi!!"));
+
+            var rTable = new RoutingTable();
+
+            action(rTable);
+        
         }
     }
 }
