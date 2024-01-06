@@ -37,17 +37,8 @@
         {
         }
 
-        public async Task<string> Test(TextResponse textResponse)
-        {
-            Console.WriteLine(textResponse);
-
-            return "Test";
-        }
-
         public async Task Start()
         {
-            //return;
-
             this.listener.Start();
 
             Console.WriteLine($"Server started on port {port}...");
@@ -60,8 +51,6 @@
                 var networkStream = connection.GetStream();
 
                 var requestText = await this.ReadRequest(networkStream);
-
-                
                 
                 var request = HttpRequest.Parse(requestText);
 
@@ -72,6 +61,7 @@
                 connection.Close();
             }
         }
+
         private async Task<string> ReadRequest(NetworkStream networkStream)
         {
             var bufferLength = 1024;
@@ -97,8 +87,6 @@
             }
             while (networkStream.DataAvailable);
 
-
-
             return requestBuilder.ToString();
         }
 
@@ -111,7 +99,6 @@
             await networkStream.WriteAsync(responseBytes);
         }
 
-        // Git test
     }
 }
 

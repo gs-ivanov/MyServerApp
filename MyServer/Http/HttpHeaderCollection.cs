@@ -8,9 +8,8 @@
         private readonly Dictionary<string, HttpHeader> headers;
 
         public HttpHeaderCollection()
-        {
-            this.headers = new Dictionary<string, HttpHeader>();
-        }
+        => this.headers = new Dictionary<string, HttpHeader>();
+       
         public int Count => this.headers.Count;
 
         public void Add(string name, string value)
