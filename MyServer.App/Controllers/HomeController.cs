@@ -1,12 +1,21 @@
 ﻿namespace MyServer.App.Controllers
 {
+    using MyServer.Controllers;
     using MyServer.Http;
 
-    public class HomeController
+    public class HomeController : Controller
     {
-        public HttpResponse Index()
+        public HomeController(HttpRequest request)
+            :base(request)
         {
-            return null;
         }
+
+        public HttpResponse Index()
+            => Text("Hello from Ivo!");
+
+        public HttpResponse LocalRedirect() => Redirect("/Cats");
+
+        public HttpResponse ToSoftUni() => Redirect("https://softuni.bg");
+
     }
 }
